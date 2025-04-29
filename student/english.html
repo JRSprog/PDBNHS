@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paso De Blas National High School</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="shortcut icon" href="../img/pdbnhs.png" type="image/x-icon">
+    <link rel="stylesheet" href="../style.css?v=1.2">
+</head>
+<body>
+    <!-- Sidebar Overlay -->
+    <div class="sidebar-overlay"></div>
+
+    <header>
+        <div class="header-left">
+            <button class="burger-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="header-title">Paso De Blas National High School</div>
+        </div>
+    </header>
+
+    <aside>
+        <div class="logo">
+            <img src="../img/pdbnhs.png" alt="School Logo">
+            <h1>Paso De Blas NHS</h1>
+        </div>
+        
+        <div class="menu-title">Main</div>
+        <nav class="nav-menu">
+            <a href="pdbnhs.html" class="nav-item">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+
+            <div class="dropdown">
+                <div class="dropdown-header" onclick="toggleDropdown(this)">
+                    <div><i class="fas fa-info-circle"></i> About Us</div>
+                    <i class="fas fa-chevron-down chevron"></i>
+                </div>
+                <div class="dropdown-content">
+                    <a href="charter.html" class="nav-item">
+                        <i class="fas fa-scroll"></i>
+                        <span>Citizen Charter</span>
+                    </a>
+
+                    <div class="dropdown">
+                        <div class="dropdown-header" onclick="toggleDropdown(this)">
+                            <div><i class="fas fa-sitemap"></i> Organizational Structure</div>
+                            <i class="fas fa-chevron-down chevron"></i>
+                        </div>
+                        <div class="dropdown-content">
+                            <a href="department.html" class="nav-item">
+                                <i class="fa-solid fa-building"></i>
+                                <span>Departments</span>
+                            </a>
+
+                            <a href="" class="nav-item">
+                                <i class="fas fa-users-cog"></i>
+                                <span>Committees & Units</span>
+                            </a>
+                        </div>
+                      </div>
+                </div>
+              </div>
+
+            <a href="announcement.html" class="nav-item">
+                <i class="fa-solid fa-bullhorn"></i>
+                <span>Announcement</span>
+            </a>
+            <a href="gallery.html" class="nav-item">
+                <i class="fa-solid fa-images"></i>
+                <span>Gallery</span>
+            </a>
+            <a href="kto12.html" class="nav-item">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <span>K TO 12</span>
+            </a>
+            <a href="course.html" class="nav-item">
+                <i class="fa-solid fa-book-open"></i>
+                <span>Course Offerings for Senior High</span>
+            </a>
+            <a href="contact.html" class="nav-item">
+                <i class="fa-solid fa-phone"></i>
+                <span>Contact</span>
+            </a>
+        </nav>
+        
+        <div class="menu-title">Enrollment</div>
+            <a href="../enrollment.html" class="nav-item">
+                <i class="fa-solid fa-user"></i>
+                <span>Online Enrollment</span>
+            </a>
+        </nav>
+
+        <div class="menu-title">Document Request</div>
+            <a href="" class="nav-item">
+                <i class="fa-solid fa-file"></i>
+                <span>Online Document Request</span>
+            </a>
+        </nav>
+    </aside>
+
+    <main>
+        <div class="ad">
+            <button class="drop">Departments <i class="fas fa-chevron-down"></i></button>
+            <div class="dropdown-content1">
+                <a href="admin.html">Admin Department</a>
+                <a href="math.html">Math Department</a>
+                <a href="filipino.html">Filipino Department</a>
+                <a href="ap.html">AP Department</a>
+                <a href="english.html">English Department</a>
+                <a href="mapeh.html">Mapeh Department</a>
+                <a href="science.html">Science Department</a>
+                <a href="esp.html">Esp Department</a>
+                <a href="tle.html">TLE Department</a>
+                <a href="staff.html">Canteen Staff, Maintenance & Security</a>
+                <a href="seniorhsf.html">Senior High School Faculty</a>
+            </div>
+        </div>
+    
+        <div class="adept" id="MATH">
+            <div class="pamagat">
+                <h2>ENGLISH DEPARTMENT</h2>
+            </div>
+    
+            <div class="adlist">
+                <div class="head">
+                    <img src="../img/ENGLISH DEPT/ad.png" alt="ENGLISH Department Header"> 
+                </div>
+                <img src="../img/ENGLISH DEPT/ad1.png" alt="ENGLISH Staff Photo 1">
+                <img src="../img/ENGLISH DEPT/ad2.png" alt="ENGLISH Staff Photo 2">
+                <img src="../img/ENGLISH DEPT/ad3.png" alt="ENGLISH Staff Photo 3">
+                <img src="../img/ENGLISH DEPT/ad4.png" alt="ENGLISH Staff Photo 4">
+                <img src="../img/ENGLISH DEPT/ad5.png" alt="ENGLISH Staff Photo 5">
+                <img src="../img/ENGLISH DEPT/ad6.png" alt="ENGLISH Staff Photo 6">
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 Paso De Blas National High School. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Toggle sidebar
+            const burgerBtn = document.querySelector('.burger-btn');
+            const sidebar = document.querySelector('aside');
+            const sidebarOverlay = document.querySelector('.sidebar-overlay');
+            
+            burgerBtn.addEventListener('click', function() {
+                sidebar.classList.toggle('show');
+                sidebarOverlay.classList.toggle('show');
+            });
+            
+            sidebarOverlay.addEventListener('click', function() {
+                sidebar.classList.remove('show');
+                sidebarOverlay.classList.remove('show');
+            });
+
+            // Navigation menu active state
+            const navIte= document.querySelectorAll('.nav-item');
+            
+            navIteforEach(item => {
+                item.addEventListener('click', function(e) {
+                    
+                    navIteforEach(nav => nav.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Close sidebar on mobile after clicking a nav item
+                    if (window.innerWidth <= 992) {
+                        sidebar.classList.remove('show');
+                        sidebarOverlay.classList.remove('show');
+                    }
+                });
+            });
+            
+            // Responsive adjustment
+            function handleResize() {
+                if (window.innerWidth > 992) {
+                    sidebar.classList.add('show');
+                } else {
+                    sidebar.classList.remove('show');
+                }
+            }
+            
+            window.addEventListener('resize', handleResize);
+            handleResize();
+        });
+
+        function toggleDropdown(header) {
+    const dropdown = header.parentElement;
+    const content = dropdown.querySelector('.dropdown-content');
+    const chevron = dropdown.querySelector('.chevron');
+    
+    dropdown.classList.toggle('active');
+    content.classList.toggle('show');
+    header.setAttribute('aria-expanded', header.classList.contains('active'));
+}
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const dropBtn = document.querySelector('.drop');
+    const dropdownContent = document.querySelector('.dropdown-content1');
+    
+    dropBtn.addEventListener('click', function() {
+        dropdownContent.classList.toggle('show');
+    });
+    
+    // Close the dropdown if clicked outside
+    window.addEventListener('click', function(e) {
+        if (!e.target.matches('.drop') && !e.target.closest('.drop')) {
+            if (dropdownContent.classList.contains('show')) {
+                dropdownContent.classList.remove('show');
+            }
+        }
+    });
+});
+    </script>
+</body>
+</html>
