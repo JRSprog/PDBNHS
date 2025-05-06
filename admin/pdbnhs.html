@@ -677,13 +677,14 @@
 
 
 document.addEventListener('DOMContentLoaded', function() {
-        const isAuthenticated = sessionStorage.getItem('authenticated') === 'true';
-        
-        if (!isAuthenticated) {
-            // Redirect to login page if not authenticated
-            window.location.href = '../enrollment.html';
-            return; // Stop further execution
-        }
+    // Check authentication
+    const isAuthenticated = sessionStorage.getItem('authenticated') === 'true' || 
+                          localStorage.getItem('pdb_verify');
+    
+    if (!isAuthenticated) {
+        window.location.href = "../enrollment.html";
+        return;
+    }
         
         // Logout functionality
         document.getElementById('logoutBtn').addEventListener('click', function(e) {
