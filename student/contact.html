@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paso De Blas National High School</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="shortcut icon" href="../img/pdbnhs.png" type="image/x-icon">
+    <link rel="stylesheet" href="../style.css?v=1.2">
+</head>
+<body>
+    <!-- Sidebar Overlay -->
+    <div class="sidebar-overlay"></div>
+
+    <header>
+        <div class="header-left">
+            <button class="burger-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="header-title">Paso De Blas National High School</div>
+        </div>
+    </header>
+
+    <aside>
+        <div class="logo">
+            <img src="../img/pdbnhs.png" alt="School Logo">
+            <h1>Paso De Blas NHS</h1>
+        </div>
+        
+        <div class="menu-title">Main</div>
+        <nav class="nav-menu">
+            <a href="pdbnhs.html" class="nav-item">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+
+            <div class="dropdown">
+                <div class="dropdown-header" onclick="toggleDropdown(this)">
+                    <div><i class="fas fa-info-circle"></i> About Us</div>
+                    <i class="fas fa-chevron-down chevron"></i>
+                </div>
+                <div class="dropdown-content">
+                    <a href="charter.html" class="nav-item">
+                        <i class="fas fa-scroll"></i>
+                        <span>Citizen Charter</span>
+                    </a>
+
+                    <div class="dropdown">
+                        <div class="dropdown-header" onclick="toggleDropdown(this)">
+                            <div><i class="fas fa-sitemap"></i> Organizational Structure</div>
+                            <i class="fas fa-chevron-down chevron"></i>
+                        </div>
+                        <div class="dropdown-content">
+                            <a href="department.html" class="nav-item">
+                                <i class="fa-solid fa-building"></i>
+                                <span>Departments</span>
+                            </a>
+
+                            <a href="" class="nav-item">
+                                <i class="fas fa-users-cog"></i>
+                                <span>Committees & Units</span>
+                            </a>
+                        </div>
+                      </div>
+                </div>
+              </div>
+
+            <a href="announcement.html" class="nav-item">
+                <i class="fa-solid fa-bullhorn"></i>
+                <span>Announcement</span>
+            </a>
+            <a href="gallery.html" class="nav-item">
+                <i class="fa-solid fa-images"></i>
+                <span>Gallery</span>
+            </a>
+            <a href="kto12.html" class="nav-item">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <span>K TO 12</span>
+            </a>
+            <a href="course.html" class="nav-item">
+                <i class="fa-solid fa-book-open"></i>
+                <span>Course Offerings for Senior High</span>
+            </a>
+            <a href="contact.html" class="nav-item">
+                <i class="fa-solid fa-phone"></i>
+                <span>Contact</span>
+            </a>
+        </nav>
+        
+        <div class="menu-title">Enrollment</div>
+            <a href="../enrollment.html" class="nav-item">
+                <i class="fa-solid fa-user"></i>
+                <span>Online Enrollment</span>
+            </a>
+        </nav>
+
+        <div class="menu-title">Document Request</div>
+            <a href="" class="nav-item">
+                <i class="fa-solid fa-file"></i>
+                <span>Online Document Request</span>
+            </a>
+        </nav>
+    </aside>
+
+
+    <main>
+        <div class="contact">
+            <h8>Contact Us</h8>
+            <div class="logos">
+                <i class="fa-solid fa-phone" id="icon1"></i><img src="../img/deped.png" alt="" style="margin-top: 20px;">
+                <i class="fa-solid fa-envelope-open-text" id="icon2"></i><img src="../img/div.png    " alt="">
+                <i class="fa-brands fa-facebook" id="icon3"></i><img src="../img/pdbnhs.png" alt="">
+            </div>
+        
+            <div class="contact-info-group">
+                <span>Telephone</span>
+                <p>0283987897</p>
+            </div>
+            
+            <div class="contact-info-group">
+                <span>Email</span>
+                <a href="mailto:pasodeblashigh@gmail.com">pasodeblashigh@gmail.com</a>
+            </div>
+            
+            <div class="contact-info-group">
+                <span>Facebook</span>
+                <a href="https://web.facebook.com/profile.php?id=61550358572324"><p>PASO DE BLAS NATIONAL HIGH SCHOOL</p></a>
+            </div>
+
+        <div class="location">
+            <h2>#0027 PASO DE BLAS ST. TCL, PASO DE BLAS,
+                VALENZUELA CITY</h2>
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.144722680896!2d120.98432227408239!3d14.70440657452883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b3e29649a20b%3A0x2328c63230bc3144!2sPaso%20De%20Blas%20Senior%20High%20School!5e0!3m2!1sen!2sph!4v1745220745507!5m2!1sen!2sph" 
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 Paso De Blas National High School. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Toggle sidebar
+            const burgerBtn = document.querySelector('.burger-btn');
+            const sidebar = document.querySelector('aside');
+            const sidebarOverlay = document.querySelector('.sidebar-overlay');
+            
+            burgerBtn.addEventListener('click', function() {
+                sidebar.classList.toggle('show');
+                sidebarOverlay.classList.toggle('show');
+            });
+            
+            sidebarOverlay.addEventListener('click', function() {
+                sidebar.classList.remove('show');
+                sidebarOverlay.classList.remove('show');
+            });
+
+            // Navigation menu active state
+            const navItems = document.querySelectorAll('.nav-item');
+            
+            navItems.forEach(item => {
+                item.addEventListener('click', function(e) {
+                    
+                    navItems.forEach(nav => nav.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Close sidebar on mobile after clicking a nav item
+                    if (window.innerWidth <= 992) {
+                        sidebar.classList.remove('show');
+                        sidebarOverlay.classList.remove('show');
+                    }
+                });
+            });
+            
+            // Responsive adjustment
+            function handleResize() {
+                if (window.innerWidth > 992) {
+                    sidebar.classList.add('show');
+                } else {
+                    sidebar.classList.remove('show');
+                }
+            }
+            
+            window.addEventListener('resize', handleResize);
+            handleResize();
+        });
+
+
+        function toggleDropdown(header) {
+    const dropdown = header.parentElement;
+    const content = dropdown.querySelector('.dropdown-content');
+    const chevron = dropdown.querySelector('.chevron');
+    
+    dropdown.classList.toggle('active');
+    content.classList.toggle('show');
+    header.setAttribute('aria-expanded', header.classList.contains('active'));
+}
+    </script>
+</body>
+</html>
